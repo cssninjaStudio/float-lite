@@ -1,0 +1,133 @@
+<ul
+  id="documents-menu"
+  class="sidebar-menu"
+  :class="{
+  'is-active': $store.app.activeSidebar === 'accounting',
+  '': !$store.app.activeSidebar !== 'accounting'
+}"
+>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'accounting-menu',
+      '': !$store.app.activeSidebarMenu !== 'accounting-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('accounting-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:calculator-duotone"></i>
+      <span>Accounting</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'accounting-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Bills List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Bills Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Invoices List</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Invoices Grid</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Invoice</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'social-menu',
+      '': !$store.app.activeSidebarMenu !== 'social-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('social-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:confetti-duotone"></i>
+      <span>Social</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'social-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Social Feed</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Events</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'forum-menu',
+      '': !$store.app.activeSidebarMenu !== 'forum-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('forum-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:chat-circle-text-duotone"></i>
+      <span>Forum</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'forum-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Forum Home</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Forum Channel</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Forum Topic</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'support-menu',
+      '': !$store.app.activeSidebarMenu !== 'support-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('support-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:lifebuoy-duotone"></i>
+      <span>Support</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'support-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Ticket Details</a>
+      </li>
+    </ul>
+  </li>
+</ul>

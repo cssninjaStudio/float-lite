@@ -1,0 +1,113 @@
+<ul
+  id="misc-menu"
+  class="sidebar-menu"
+  :class="{
+  'is-active': $store.app.activeSidebar === 'misc',
+  '': !$store.app.activeSidebar !== 'misc'
+}"
+>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'messages-menu',
+      '': !$store.app.activeSidebarMenu !== 'messages-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('messages-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:envelope-duotone"></i>
+      <span>Messages</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'messages-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Message Inbox</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'forms-menu',
+      '': !$store.app.activeSidebarMenu !== 'forms-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('forms-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:keyboard-duotone"></i>
+      <span>Forms</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'forms-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Horizontal Form</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Vertical Form</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'empty-menu',
+      '': !$store.app.activeSidebarMenu !== 'empty-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('empty-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:selection-duotone"></i>
+      <span>Empty States</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'empty-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Placeholder</a>
+      </li>
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">Error 404</a>
+      </li>
+    </ul>
+  </li>
+  <!--Menu item-->
+  <li
+    class="menu-item"
+    :class="{
+      'active': $store.app.activeSidebarMenu === 'others-menu',
+      '': !$store.app.activeSidebarMenu !== 'others-menu'
+  }"
+  >
+    <a @click.prevent="openSidebarMenu('others-menu')" class="menu-link" href="javascript:void(0)">
+      <i class="iconify link-icon" data-icon="ph:cookie-duotone"></i>
+      <span>Misc</span>
+      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+    </a>
+    <ul
+      class="sub-menu"
+      x-show="$store.app.activeSidebarMenu === 'others-menu'"
+      x-collapse
+    >
+      <!--Submenu item-->
+      <li>
+        <a class="sub-menu-item" href="#">UI Elements</a>
+      </li>
+    </ul>
+  </li>
+</ul>
