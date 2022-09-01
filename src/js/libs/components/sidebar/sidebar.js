@@ -2,11 +2,11 @@ export function initSidebar() {
   return {
     openSidebar(param) {
       if (this.$store.app.sidebarOpenedState === false) {
-        this.$store.app.sidebarOpenedState = !this.$store.app
-          .sidebarOpenedState;
+        this.$store.app.sidebarOpenedState =
+          !this.$store.app.sidebarOpenedState;
       }
       this.$store.app.activeSidebar = param;
-      this.$store.app.isPanelOpened = false
+      this.$store.app.isPanelOpened = false;
       console.log(this.$store.app.activeSidebar);
     },
   };
@@ -19,13 +19,13 @@ export function initSidebarLeft() {
       let links = document.getElementsByClassName("sub-menu-item");
       for (var i = 0; i < links.length; i++) {
         if (links[i].href === location) {
-          links[i].classList.add('is-active');
+          links[i].classList.add("is-active");
         }
       }
     },
     closeSidebar() {
       this.$store.app.sidebarOpenedState = false;
-      this.$store.app.isSidebarOpenedMobile = false
+      this.$store.app.isSidebarOpenedMobile = false;
     },
 
     openSidebarMenu(param) {
@@ -86,4 +86,3 @@ export function initSidebarLeft() {
     },
   };
 }
-
