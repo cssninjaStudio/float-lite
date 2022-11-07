@@ -4,24 +4,28 @@
 import Alpine from "alpinejs";
 import intersect from "@alpinejs/intersect";
 import collapse from "@alpinejs/collapse";
-import Fern from "@ryangjchandler/fern";
+import persist from "@alpinejs/persist";
 
 window.Alpine = Alpine;
 //Init intersect plugin
 Alpine.plugin(intersect);
-//Init Fern plugin
-Alpine.plugin(Fern);
+//Init persist plugin
+Alpine.plugin(persist);
 //Init collapse plugin
 Alpine.plugin(collapse);
-//Init Fern persisted store
-Alpine.persistedStore("app", {
-  isDark: false,
-  isSidebarOpened: false,
-  isSidebarOpenedMobile: false,
-  activeSidebar: "dashboard",
-  activeSidebarMenu: "",
-  isPanelOpened: false,
+//Init store
+Alpine.store("app", {
+  init() {
+    this.on = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  },
+  isDark: Alpine.$persist(false),
+  isSidebarOpened: Alpine.$persist(false),
+  isSidebarOpenedMobile: Alpine.$persist(false),
+  activeSidebar: Alpine.$persist("dashboard"),
+  activeSidebarMenu: Alpine.$persist(""),
+  isPanelOpened: Alpine.$persist(false),
 });
+
 //Start Alpine JS
 Alpine.start();
 
@@ -31,6 +35,7 @@ import "./libs/pages";
 
 document.onreadystatechange = function () {
   if (document.readyState == "complete") {
+
     //Switch backgrounds
     const changeBackgrounds = insertBgImages();
   }
