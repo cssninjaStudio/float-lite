@@ -7,7 +7,6 @@ export function initSidebar() {
       }
       this.$store.app.activeSidebar = param;
       this.$store.app.isPanelOpened = false;
-      console.log(this.$store.app.activeSidebar);
     },
   };
 }

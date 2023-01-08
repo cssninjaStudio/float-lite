@@ -1,0 +1,51 @@
+---
+import SidebarMenu1 from './SidebarMenu1.astro'
+import SidebarMenu2 from './SidebarMenu2.astro'
+import SidebarMenu3 from './SidebarMenu3.astro'
+import SidebarMenu4 from './SidebarMenu4.astro'
+---
+
+<nav
+  class="menu-sidebar"
+  x-data="initSidebarLeft()"
+  x-init="$store.app.sidebarOpenedState = false"
+  :class="{
+        'is-sidebar-translated': $store.app.sidebarOpenedState,
+        '': !$store.app.sidebarOpenedState,
+        'is-menu-sidebar-translated-mobile': $store.app.isSidebarOpenedMobile,
+    }"
+>
+  <div class="menu-sidebar-inner">
+    <!-- Child menu header -->
+    <ul>
+      <li class="child-header">
+        <h2 class="sidebar-title">Altitude</h2>
+        <a
+          href="javascript:void(0);"
+          class="menu-toggle"
+          @click="closeSidebar()"
+        >
+          <span
+            class="icon-box-toggle is-navbar"
+            :class="{
+                'active': $store.app.sidebarOpenedState || $store.app.isSidebarOpenedMobile,
+                '': !$store.app.sidebarOpenedState || !$store.app.isSidebarOpenedMobile,
+            }"
+          >
+            <span class="rotate">
+              <i class="icon-line-top"></i>
+              <i class="icon-line-center"></i>
+              <i class="icon-line-bottom"></i>
+            </span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <!--Sidebar Menu Panel-->
+    <SidebarMenu1 />
+    <SidebarMenu2 />
+    <SidebarMenu3 />
+    <SidebarMenu4 />
+  </div>
+</nav>
