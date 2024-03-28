@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.1.1](https://github.com/cssninjaStudio/float-lite/compare/v2.1.0...v2.1.1) (2023-05-03)
+
+## [2.1.0](https://github.com/cssninjaStudio/float-lite/compare/v2.0.0...v2.1.0) (2023-02-10)
+
+
+### Features
+
+* upgrade to Astro v2 ([4f1baa0](https://github.com/cssninjaStudio/float-lite/commit/4f1baa09329623110a0fc193ff04dc8bd2200149))
+
+## [2.0.0](https://github.com/cssninjaStudio/float-lite/compare/v1.0.1...v2.0.0) (2023-01-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* migrate from gulp to astro
+
+### Features
+
+* migrate from gulp to astro ([d61dd98](https://github.com/cssninjaStudio/float-lite/commit/d61dd9834c71939b601d42e4ab332bd2219c9878))
+
 ### [1.0.1](https://github.com/cssninjaStudio/float-lite/compare/v1.0.0...v1.0.1) (2022-11-27)
 
 ## 1.0.0 (2022-11-07)
