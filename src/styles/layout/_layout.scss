@@ -2,6 +2,12 @@
 Main wrapper
 ========================================================================== */
 
+.container {
+  &.is-wide {
+    max-width: 1280px !important;
+  }
+}
+
 .float-wrapper {
   position: relative;
   width: calc(100% - 80px);
@@ -78,5 +84,18 @@ Main wrapper
   .float-wrapper {
     width: calc(100% - 420px);
     margin-#{$end-direction}: 340px;
+  }
+}
+
+@media only screen and (orientation: portrait) {
+  .columns {
+    &.is-block-portrait {
+      display: block !important;
+
+      .column {
+        width: 100% !important;
+        margin: 0 !important;
+      }
+    }
   }
 }

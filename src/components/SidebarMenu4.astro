@@ -1,29 +1,18 @@
-<ul
-  id="misc-menu"
-  class="sidebar-menu"
-  :class="{
+<ul id="misc-menu" class="sidebar-menu" :class=`{
   'is-active': $store.app.activeSidebar === 'misc',
   '': !$store.app.activeSidebar !== 'misc'
-}"
->
+}`>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'messages-menu',
       '': !$store.app.activeSidebarMenu !== 'messages-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('messages-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:envelope-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:envelope-duotone"></iconify-icon>
       <span>Messages</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'messages-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'messages-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-inbox">Message Inbox</a>
@@ -31,23 +20,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'forms-menu',
       '': !$store.app.activeSidebarMenu !== 'forms-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('forms-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:keyboard-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:keyboard-duotone"></iconify-icon>
       <span>Forms</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'forms-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'forms-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-form-1">Horizontal Form</a>
@@ -59,23 +41,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'empty-menu',
       '': !$store.app.activeSidebarMenu !== 'empty-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('empty-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:selection-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:selection-duotone"></iconify-icon>
       <span>Empty States</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'empty-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'empty-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-placeholder">Placeholder</a>
@@ -87,23 +62,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'others-menu',
       '': !$store.app.activeSidebarMenu !== 'others-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('others-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:cookie-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:cookie-duotone"></iconify-icon>
       <span>Misc</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'others-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'others-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#elements">UI Elements</a>

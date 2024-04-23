@@ -1,29 +1,18 @@
-<ul
-  id="dashboard-menu"
-  class="sidebar-menu"
-  :class="{
+<ul id="dashboard-menu" class="sidebar-menu" :class=`{
   'is-active': $store.app.activeSidebar === 'dashboard',
   '': !$store.app.activeSidebar !== 'dashboard'
-}"
->
+}`>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'dashboard-menu',
       '': !$store.app.activeSidebarMenu !== 'dashboard-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('dashboard-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:layout-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:layout-duotone"></iconify-icon>
       <span>Dashboards</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'dashboard-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'dashboard-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#dashboard-ecommerce">Ecommerce</a>
@@ -51,23 +40,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'datatables-menu',
       '': !$store.app.activeSidebarMenu !== 'datatables-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('datatables-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:table-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:table-duotone"></iconify-icon>
       <span>Datatables</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'datatables-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'datatables-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-datatable">Datatable</a>
@@ -75,23 +57,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'charts-menu',
       '': !$store.app.activeSidebarMenu !== 'charts-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('charts-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:chart-pie-slice-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:chart-pie-slice-duotone"></iconify-icon>
       <span>Charts</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'charts-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'charts-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#charts-apex">Apex Charts</a>
@@ -99,23 +74,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'auth-menu',
       '': !$store.app.activeSidebarMenu !== 'auth-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('auth-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:lock-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:lock-duotone"></iconify-icon>
       <span>Authentication</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'auth-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'auth-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#auth-signup">Signup</a>

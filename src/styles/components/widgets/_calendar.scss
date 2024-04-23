@@ -1,3 +1,25 @@
+.calendar-widget-container {
+  @include floatCard();
+
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+
+  .calendar-widget-footer {
+    display: flex;
+    align-items: center;
+    padding: 0 0.5rem;
+    margin-top: 1rem;
+
+    span {
+      display: block;
+      font-family: var(--font);
+      font-size: 0.9rem;
+      color: var(--primary);
+      margin-#{$start-direction}: 0.5rem;
+    }
+  }
+}
+
 .calendar-widget {
   .calendar-toolbar {
     display: flex;

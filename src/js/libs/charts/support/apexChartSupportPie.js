@@ -11,7 +11,7 @@ export function initApexSupportPieChart() {
         width: 155,
         type: "pie",
       },
-      colors: [themeColors.primary, themeColors.lightGreen],
+      colors: [themeColors.primary, themeColors.secondary],
       dataLabels: {
         enabled: false,
       },

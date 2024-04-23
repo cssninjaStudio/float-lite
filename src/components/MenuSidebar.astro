@@ -9,28 +9,24 @@ import SidebarMenu4 from './SidebarMenu4.astro'
   class="menu-sidebar"
   x-data="initSidebarLeft()"
   x-init="$store.app.sidebarOpenedState = false"
-  :class="{
+  :class=`{
         'is-sidebar-translated': $store.app.sidebarOpenedState,
         '': !$store.app.sidebarOpenedState,
         'is-menu-sidebar-translated-mobile': $store.app.isSidebarOpenedMobile,
-    }"
+    }`
 >
   <div class="menu-sidebar-inner">
     <!-- Child menu header -->
     <ul>
       <li class="child-header">
         <h2 class="sidebar-title">Altitude</h2>
-        <a
-          href="javascript:void(0);"
-          class="menu-toggle"
-          @click="closeSidebar()"
-        >
+        <a href="javascript:void(0);" class="menu-toggle" @click="closeSidebar()">
           <span
             class="icon-box-toggle is-navbar"
-            :class="{
+            :class=`{
                 'active': $store.app.sidebarOpenedState || $store.app.isSidebarOpenedMobile,
                 '': !$store.app.sidebarOpenedState || !$store.app.isSidebarOpenedMobile,
-            }"
+            }`
           >
             <span class="rotate">
               <i class="icon-line-top"></i>

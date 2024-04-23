@@ -1,29 +1,18 @@
-<ul
-  id="business-menu"
-  class="sidebar-menu"
-  :class="{
+<ul id="business-menu" class="sidebar-menu" :class=`{
   'is-active': $store.app.activeSidebar === 'business',
   '': !$store.app.activeSidebar !== 'business'
-}"
->
-<!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+}`>
+  <!--Menu item-->
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'projects-menu',
       '': !$store.app.activeSidebarMenu !== 'projects-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('projects-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:projector-screen-chart-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:projector-screen-chart-duotone"></iconify-icon>
       <span>Projects</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'projects-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'projects-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-project-list">Project List</a>
@@ -39,23 +28,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'crm-menu',
       '': !$store.app.activeSidebarMenu !== 'crm-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('crm-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:crown-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:crown-duotone"></iconify-icon>
       <span>CRM</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'crm-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'crm-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-crm-segments">Segments</a>
@@ -71,23 +53,16 @@
     </ul>
   </li>
   <!--Menu item-->
-  <li
-    class="menu-item"
-    :class="{
+  <li class="menu-item" :class=`{
       'active': $store.app.activeSidebarMenu === 'contacts-menu',
       '': !$store.app.activeSidebarMenu !== 'contacts-menu'
-  }"
-  >
+  }`>
     <a @click.prevent="openSidebarMenu('contacts-menu')" class="menu-link" href="javascript:void(0)">
-      <i class="iconify link-icon" data-icon="ph:users-four-duotone"></i>
+      <iconify-icon class="iconify link-icon" icon="ph:users-four-duotone"></iconify-icon>
       <span>Contacts</span>
-      <i class="iconify link-caret" data-icon="feather:chevron-down"></i>
+      <iconify-icon class="iconify link-caret" icon="feather:chevron-down"></iconify-icon>
     </a>
-    <ul
-      class="sub-menu"
-      x-show="$store.app.activeSidebarMenu === 'contacts-menu'"
-      x-collapse
-    >
+    <ul class="sub-menu" x-show="$store.app.activeSidebarMenu === 'contacts-menu'" x-collapse>
       <!--Submenu item-->
       <li>
         <a class="sub-menu-item" href="/#content-contact-list">Contact List</a>

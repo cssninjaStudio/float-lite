@@ -65,7 +65,7 @@ Navbar
         &.is-hoverable:hover {
           background: var(--wrap-muted-color);
 
-          svg {
+          svg, .iconify {
             stroke: var(--title-color);
             color: var(--title-color);
           }
@@ -114,6 +114,13 @@ Navbar
           height: 18px;
           width: 18px;
           stroke-width: 1.6px;
+          stroke: var(--light-text);
+          color: var(--light-text);
+          transition: stroke 0.3s;
+        }
+
+        .iconify {
+          font-size: 1rem;
           stroke: var(--light-text);
           color: var(--light-text);
           transition: stroke 0.3s;
