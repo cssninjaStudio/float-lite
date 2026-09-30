@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/cssninjaStudio/float-lite/compare/v2.2.0...v2.3.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([aaf0ca9](https://github.com/cssninjaStudio/float-lite/commit/aaf0ca9003a2c9a9cafe7a9328df5269c50ae348))
+
 ## [2.2.0](https://github.com/cssninjaStudio/float-lite/compare/v2.1.1...v2.2.0) (2024-04-23)
 
 ### [2.1.1](https://github.com/cssninjaStudio/float-lite/compare/v2.1.0...v2.1.1) (2023-05-03)
